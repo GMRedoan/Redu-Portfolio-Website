@@ -1,14 +1,12 @@
 import { useForm } from "react-hook-form";
 import {
-  FaMapMarkerAlt,
   FaPhoneAlt,
-  FaFax,
   FaEnvelope,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
+  FaLocationArrow,
 } from "react-icons/fa";
+import { ImLocation2 } from "react-icons/im";
+import { IoIosSend, IoLogoWhatsapp } from "react-icons/io";
+import { PiPlugsConnectedFill } from "react-icons/pi";
 
 const ContactMe = () => {
   const {
@@ -24,154 +22,198 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="contact-section" className="py-12 sm:py-20 relative">
+      <div className="max-w-7xl mx-auto">
+        <div>
+          <div
+            className="
+              absolute inset-0 mx-22 max-w-8xl
+              bg-linear-to-br from-lime-600 to-lime-400
+              rounded-2xl blur-[60px] opacity-25
+            "
+          />
 
-        {/* ===== TOP INFO CARDS ===== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {[
-            {
-              icon: <FaMapMarkerAlt />,
-              title: "Location",
-              text: "Dhaka, Bangladesh",
-            },
-            {
-              icon: <FaPhoneAlt />,
-              title: "Phone",
-              text: "+880 1234 567 890",
-            },
-            {
-              icon: <FaFax />,
-              title: "Fax",
-              text: "+880 9876 543 210",
-            },
-            {
-              icon: <FaEnvelope />,
-              title: "Email",
-              text: "hello@example.com",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="
-                bg-black/60 backdrop-blur-xl
-                border border-white/10
-                rounded-xl p-6 text-center
-                shadow-[0_10px_30px_rgba(132,204,22,0.15)]
-              "
-            >
-              <div className="text-3xl text-lime-400 mx-auto mb-3">
-                {item.icon}
+          {/* ===== TOP INFO CARDS ===== */}
+          <div
+            className="
+              grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+              gap-6 mb-16 max-w-6xl mx-auto
+              static sm:absolute
+              sm:-top-5 sm:right-65
+              z-10
+            "
+          >
+            {[
+              {
+                icon: <FaEnvelope className="bounce-custom" />,
+                title: "Email",
+                text: "redoangazi69@gmail.com",
+              },
+              {
+                icon: <FaPhoneAlt className="shake" />,
+                title: "Phone",
+                text: "+880 1764108600",
+              },
+              {
+                icon: <IoLogoWhatsapp className="bounce-custom" />,
+                title: "Whatsapp",
+                text: "+880 1764108600",
+              },
+              {
+                icon: <ImLocation2 className="animate-pulse" />,
+                title: "Location",
+                text: "Dhaka, Bangladesh",
+              },
+            ].map((item, i) => (
+              <div key={i} data-aos="zoom-in-down">
+                <div
+                  className="
+                    bg-gray-950 backdrop-blur-xl
+                    rounded-xl p-7 px-10 mx-14 md:mx-0 text-center
+                    hover:scale-[1.03] duration-300
+                    shadow-[0_10px_30px_rgba(34,197,94,0.3)]
+                    hover:shadow-[0_15px_50px_rgba(34,197,94,0.4)]
+                    border border-b-lime-400
+                  "
+                >
+                  <div className="text-3xl text-lime-400 flex justify-center mx-auto mb-3">
+                    {item.icon}
+                  </div>
+                  <h4 className="text-white text-lg font-semibold">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-gray-400 mt-1">{item.text}</p>
+                </div>
               </div>
-              <h4 className="text-white font-semibold">{item.title}</h4>
-              <p className="text-sm text-gray-400 mt-1">{item.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* ===== MAIN CONTENT ===== */}
-        <div
-          className="
-            grid grid-cols-1 lg:grid-cols-2 gap-12
-            bg-black/50 backdrop-blur-xl
-            rounded-2xl p-10
-            border border-white/10
-          "
-        >
-          {/* LEFT CONTENT */}
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Get in <span className="text-lime-400">Touch</span>
-            </h2>
-
-            <p className="text-gray-400 mb-6">
-              I’m always open to discussing new projects, creative ideas,
-              or opportunities to be part of your vision.
-            </p>
-
-            <p className="text-gray-500 text-sm mb-8">
-              Feel free to reach out if you have a question or just want to say hi.
-            </p>
-
-            {/* SOCIALS */}
-            <div className="flex gap-4">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map(
-                (Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="
-                      w-10 h-10 rounded-full
-                      flex items-center justify-center
-                      border border-lime-400/30
-                      text-lime-400
-                      transition-all duration-300
-                      hover:bg-lime-400 hover:text-black
-                    "
-                  >
-                    <Icon />
-                  </a>
-                )
-              )}
-            </div>
+            ))}
           </div>
 
-          {/* RIGHT FORM */}
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            {/* Email */}
+          {/* ===== MAIN CONTENT ===== */}
+          <div
+            data-aos="zoom-in"
+            className="
+              grid grid-cols-1 lg:grid-cols-2 gap-10
+              bg-gray-950 backdrop-blur-xl
+              rounded-2xl
+              p-6 sm:p-10
+              pt-10 sm:pt-20
+            "
+          >
+            {/* LEFT CONTENT */}
             <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                {...register("email", { required: true })}
-                className="input input-bordered w-full bg-transparent text-white"
-              />
-              {errors.email && (
-                <span className="text-red-400 text-xs">Email is required</span>
-              )}
+              <div className="text-2xl sm:text-3xl font-bold flex gap-2">
+                <PiPlugsConnectedFill className="text-lime-400 mt-1 animate-pulse" />
+                <h2 className="text-white mb-4">
+                  Let's{" "}
+                  <span className="bg-linear-to-r from-emerald-700 to-lime-500 bg-clip-text text-transparent">
+                    Connect !
+                  </span>
+                </h2>
+              </div>
+
+              <p className="text-gray-300 mb-6">
+                I’m always open to discussing new projects, creative ideas,
+                or opportunities to be part of your vision.
+              </p>
+
+              <p className="text-gray-400 text-sm mb-7">
+                Feel free to reach out if you have a question or just want to say hi.
+              </p>
+
+              {/* Highlights */}
+              <div
+                data-aos="fade-right"
+                className="space-y-3 font-semibold cursor-pointer"
+              >
+                <h3 className="font-bold bg-linear-to-r from-emerald-600 to-lime-400 bg-clip-text text-transparent text-xl">
+                  Available For:
+                </h3>
+
+                <p className="flex items-center gap-2 transition-transform duration-500 ease-in-out hover:translate-x-2 text-gray-400 hover:text-lime-500">
+                  <FaLocationArrow className="text-lime-500" />
+                  Full time & Part Time projects
+                </p>
+
+                <p className="flex items-center gap-2 transition-transform duration-500 ease-in-out hover:translate-x-2 text-gray-400 hover:text-lime-500">
+                  <FaLocationArrow className="text-lime-500" />
+                  Freelance Projects
+                </p>
+
+                <p className="flex items-center gap-2 transition-transform duration-500 ease-in-out hover:translate-x-2 text-gray-400 hover:text-lime-500">
+                  <FaLocationArrow className="text-lime-500" />
+                  Remote Works & Long time collaboration
+                </p>
+              </div>
             </div>
 
-            {/* Name */}
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                {...register("name", { required: true })}
-                className="input input-bordered w-full bg-transparent text-white"
-              />
-              {errors.name && (
-                <span className="text-red-400 text-xs">Name is required</span>
-              )}
-            </div>
-
-            {/* Message */}
-            <div>
-              <textarea
-                rows="4"
-                placeholder="Your Message"
-                {...register("message", { required: true })}
-                className="textarea textarea-bordered w-full bg-transparent text-white"
-              />
-              {errors.message && (
-                <span className="text-red-400 text-xs">
-                  Message is required
-                </span>
-              )}
-            </div>
-
-            {/* Submit */}
-            <button
-              type="submit"
-              className="
-                btn w-full
-                bg-linear-to-r from-emerald-500 to-lime-500
-                border-none text-black font-semibold
-                hover:scale-[1.02] transition-all duration-300
-              "
+            {/* RIGHT FORM */}
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="space-y-4 sm:space-y-6"
             >
-              Submit
-            </button>
-          </form>
+              {/* Name */}
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  {...register("name", { required: true })}
+                  className="input input-bordered w-full bg-transparent text-white"
+                />
+                {errors.name && (
+                  <span className="text-red-400 text-xs">
+                    Name is required
+                  </span>
+                )}
+              </div>
+
+              {/* Email */}
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  {...register("email", { required: true })}
+                  className="input input-bordered w-full bg-transparent text-white"
+                />
+                {errors.email && (
+                  <span className="text-red-400 text-xs">
+                    Email is required
+                  </span>
+                )}
+              </div>
+
+              {/* Message */}
+              <div>
+                <textarea
+                  rows="5"
+                  placeholder="Your Message"
+                  {...register("message", { required: true })}
+                  className="textarea textarea-bordered w-full bg-transparent text-white"
+                />
+                {errors.message && (
+                  <span className="text-red-400 text-xs">
+                    Message is required
+                  </span>
+                )}
+              </div>
+
+              {/* Submit */}
+              <button
+                data-aos="zoom-in"
+                type="submit"
+                className="
+                  btn w-full
+                  bg-linear-to-r from-emerald-600 to-lime-500
+                  border-none font-semibold
+                  hover:scale-[1.03] transition-all
+                  hover:shadow-[0_0_20px_rgba(34,197,94,0.8)]
+                  duration-300 text-white rounded-3xl
+                "
+              >
+                <IoIosSend className="text-xl bounce-custom" />
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

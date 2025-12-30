@@ -89,7 +89,15 @@ const Service = () => {
                     </div>
                 </div>
             </section>
-            <div className="w-full h-0.5 mt-16 bg-linear-to-r from-transparent via-lime-500 to-transparent animate-pulse"></div>
+            <div className="w-full h-0.5 my-16 bg-linear-to-r from-transparent via-lime-500 to-transparent animate-pulse"></div>
+        {/* heading */}
+        <div data-aos="zoom-in-down" className="text-center -mb-8 md:my-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent shimmer">
+            Get In Touch
+          </h2>
+
+          <div data-aos="zoom-in" className="w-48 h-1 mx-auto my-2 bg-lime-500 rounded-full" />
+        </div>
 
         </section>
     );

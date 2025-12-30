@@ -7,7 +7,6 @@ import SkillsIcon from './SkillsIcon';
 import MyProjects from './MyProjects';
 import ContactMe from './ContactMe';
 import Extra1 from '../Shared/Extra1';
-import CursorFollower from '../Shared/CursorFollower';
 import Extra2 from '../Shared/Extra2';
 
 const Home = () => {

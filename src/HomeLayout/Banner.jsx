@@ -94,6 +94,7 @@ const Banner = () => {
                         Node.js. Besides I already completed multiple real projects with authentication, role-based access and CRUD
                         operations. I have also problem solving strategy and can make responsive with user friendly design.
                     </p>
+             
                     <div className="flex gap-3">
                         <a
                             href="/GM_Redoan_MERN_Developer.pdf"
@@ -108,6 +109,10 @@ const Banner = () => {
 
 
                         <button
+                        onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+            }}
                             className="px-6 md:px-8 relative mt-8 font-bold rounded-3xl
     text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-lime-500
       border-2 border-gradient-to-r border-lime-500
