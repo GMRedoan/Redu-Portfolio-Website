@@ -47,7 +47,7 @@ const ContactMe = () => {
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
               gap-6 mb-16 max-w-6xl mx-auto
               static sm:absolute
-              sm:-top-5 sm:right-65
+              sm:-top-5 sm:right-45
               z-10
             "
           >

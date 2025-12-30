@@ -29,7 +29,7 @@ const SkillsIcon = () => {
 
             <div>
                 <div 
-                    className="absolute md:-top-22 left-32 md:left-160 z-10">
+                    className="absolute md:-top-22 left-32 md:left-135 z-10">
 
                     <h2 className="text-3xl md:text-5xl font-extrabold bg-linear-to-r from-emerald-500 to-lime-400 bg-clip-text text-transparent shimmer">
                         Technologies

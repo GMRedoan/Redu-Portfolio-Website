@@ -44,7 +44,9 @@ const Banner = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 250) {
+            const scrollPosition = window.scrollY;
+            const triggerPoint = window.innerHeight * 0.35;
+            if (scrollPosition > triggerPoint) {
                 setShowScrollIcon(false);
             } else {
                 setShowScrollIcon(true);
@@ -69,7 +71,7 @@ const Banner = () => {
             <div className="absolute w-96 h-96 bg-emerald-300/30 rounded-full 
         bottom-20 right-50 blur-3xl animate-floatSlow delay-2000"></div>
 
-            <div className="relative max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative max-w-7xl mx-auto px-6 py-14 md:py-24 grid md:grid-cols-2 gap-12 items-center">
 
                 {/* Left */}
                 <div data-aos="fade-right">
@@ -94,12 +96,12 @@ const Banner = () => {
                         Node.js. Besides I already completed multiple real projects with authentication, role-based access and CRUD
                         operations. I have also problem solving strategy and can make responsive with user friendly design.
                     </p>
-             
+
                     <div className="flex gap-3">
                         <a
                             href="/GM_Redoan_MERN_Developer.pdf"
                             download
-                             className="btn mt-8 px-8 text-white 
+                            className="btn mt-8 px-8 text-white 
             bg-linear-to-r from-emerald-600 to-lime-500 
             border-none shadow-lg rounded-3xl
             hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all ease-out duration-300
@@ -109,10 +111,10 @@ const Banner = () => {
 
 
                         <button
-                        onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
-            }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+                            }}
                             className="px-6 md:px-8 relative mt-8 font-bold rounded-3xl
     text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-lime-500
       border-2 border-gradient-to-r border-lime-500
@@ -182,23 +184,26 @@ const Banner = () => {
                     />
                 </div>
             </div>
-            {
-                showScrollIcon ? <div className="bottom-0 md:bottom-28 absolute flex flex-col justify-center items-center left-1/2 transform -translate-x-1/2 animate-floatSlow">
-                    <p className=" text-gray-400">Scroll Down</p>
-                    <Lottie
-                        animationData={scroll}
-                        loop={true}
-                        autoplay={true}
-                        className="w-13" />
-                </div> : <div className="bottom-0 md:bottom-28 absolute flex flex-col justify-center items-center left-1/2 transform -translate-x-1/2 animate-floatSlow">
-                    <p className=" text-gray-400">Scroll Up</p>
-                    <Lottie
-                        animationData={scroll}
-                        loop={true}
-                        autoplay={true}
-                        className="w-13 rotate-180" />
-                </div>
-            }
+
+            <div className="hidden md:block">
+                {
+                    showScrollIcon ? <div className="bottom-0 md:bottom-28 absolute flex flex-col justify-center items-center left-1/2 transform -translate-x-1/2 animate-floatSlow">
+                        <p className=" text-gray-400">Scroll Down</p>
+                        <Lottie
+                            animationData={scroll}
+                            loop={true}
+                            autoplay={true}
+                            className="w-13" />
+                    </div> : <div className="bottom-0 md:bottom-28 absolute flex flex-col justify-center items-center left-1/2 transform -translate-x-1/2 animate-floatSlow">
+                        <p className=" text-gray-400">Scroll Up</p>
+                        <Lottie
+                            animationData={scroll}
+                            loop={true}
+                            autoplay={true}
+                            className="w-13 rotate-180" />
+                    </div>
+                }
+            </div>
         </section>
     );
 };

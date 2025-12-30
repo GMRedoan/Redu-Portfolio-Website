@@ -1,8 +1,6 @@
-import { FaExternalLinkAlt, FaAppStore, FaGithub } from "react-icons/fa";
+import { FaAppStore, FaGithub } from "react-icons/fa";
 import { FaDroplet } from "react-icons/fa6";
 import { IoCarSportSharp } from "react-icons/io5";
-import { Typewriter } from "react-simple-typewriter";
-import { useInView } from "react-intersection-observer";
 import { TbLivePhotoFilled } from "react-icons/tb";
 
 const projects = [
@@ -42,17 +40,13 @@ const projects = [
 ];
 
 const MyProjects = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.4,
-  });
 
   const handleLive = (link) => {
     window.open(link, "_blank")
   }
 
   return (
-    <section id="project-section" className="py-6 pb-14 relative" ref={ref}>
+    <section id="project-section" className="py-6 pb-14 relative">
       <div className="max-w-7xl mx-auto px-4 relative">
 
         {/* BLURRED BACKGROUND GLOW */}
@@ -102,27 +96,13 @@ const MyProjects = () => {
                     <h3 className="card-title flex items-center gap-2">
                       {project.icon}
                       <span className="text-white font-bold">
-                        {inView && (
-                          <Typewriter
-                            words={[project.title]}
-                            loop={1}
-                            cursor
-                            cursorStyle=" "
-                            typeSpeed={150}
-                          />
-                        )}
-                      </span>
+                        {project.title}
+                       </span>
                     </h3>
 
-                    <p className="text-sm text-gray-300"> {inView && (
-                      <Typewriter
-                        words={[project.description]}
-                        loop={1}
-                        cursor
-                        cursorStyle=" "
-                        typeSpeed={7}
-                      />
-                    )}</p>
+                    <p className="text-sm text-gray-300"> 
+                      {project.description}
+                     </p>
 
                     {/* Tech Stack */}
                     <div data-aos="zoom-in" className="flex flex-wrap gap-2 mt-2">
@@ -148,8 +128,8 @@ const MyProjects = () => {
                           hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all ease-out duration-300
                           hover:scale-[1.04] w-full"
                       >
-                        Live Preview
-                        <TbLivePhotoFilled className="animate-pulse text-black" />
+                        View
+                        <TbLivePhotoFilled className="animate-pulse text-lg text-black" />
                       </button>
 
                       <button
