@@ -37,12 +37,10 @@ const Service = () => {
     return (
         <section className="pb-20 md:pt-10" ref={ref}>
             <section className="relative py-8 pb-12">
-                {/* tilted background */}
                 <div className="absolute inset-0 mx-22 max-w-7xl bg-linear-to-br from-emerald-900 to-lime-500 rounded-2xl
                 blur-[60px] opacity-20 border-2 border-lime-400" />
 
                 <div className="relative max-w-7xl mx-auto px-8">
-                    {/* heading */}
                     <div data-aos="zoom-in-down" className="mb-6 text-center">
                         <h2 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent shimmer">
                             Services
@@ -56,7 +54,6 @@ const Service = () => {
                         </p>
                     </div>
 
-                    {/* cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
                         {services.map(({ title, desc, icon }, i) => (
                             <div data-aos="zoom-in-down">
@@ -66,20 +63,15 @@ const Service = () => {
                                     hover:shadow-[0_30px_50px_rgba(34,197,94,0.25)]
                                     ">
 
-                                    {/* ROTATING BORDER */}
                                     <div className="
-          absolute inset-0
-          bg-[conic-gradient(from_0deg,transparent,rgba(163,230,53,0.9),transparent)]
-          animate-[spin_8s_linear_infinite]"
+                                               absolute inset-0
+                                               bg-[conic-gradient(from_0deg,transparent,rgba(163,230,53,0.9),transparent)]
+                                               animate-[spin_8s_linear_infinite]"
                                     />
 
-                                    {/* INNER MASK */}
                                     <div className="absolute inset-0.5 rounded-2xl bg-gray-950" />
 
-                                    {/* CONTENT */}
-                                    <div
-                                        className="relative z-10 py-6 px-3"
-                                    >
+                                    <div className="relative z-10 py-6 px-3">
                                         <div className="text-xl font-semibold bg-linear-to-r from-emerald-700 to-lime-500 bg-clip-text text-transparent mb-2 flex justify-center items-center gap-2">
                                             <span className="text-lime-400"> {icon}</span>
                                             {inView && (
@@ -105,8 +97,7 @@ const Service = () => {
                 </div>
             </section>
             <div className="w-full h-0.5 my-16 bg-linear-to-r from-transparent via-lime-500 to-transparent animate-pulse"></div>
-            {/* heading */}
-            <div data-aos="zoom-in-down" className="text-center -mb-8 md:my-4">
+             <div data-aos="zoom-in-down" className="text-center -mb-8 md:my-4">
                 <h2 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent shimmer">
                     Get In Touch
                 </h2>

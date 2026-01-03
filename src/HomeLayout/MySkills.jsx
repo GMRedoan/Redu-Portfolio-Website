@@ -1,21 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import {
-    FaReact,
-    FaNodeJs,
-    FaGitAlt,
-    FaCode,
-    FaHtml5,
-    FaTools,
-} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt, FaCode, FaHtml5, FaTools} from "react-icons/fa";
 import { PiFigmaLogoDuotone, PiPlugFill } from "react-icons/pi";
-import {
-    SiJavascript,
-    SiTailwindcss,
-    SiMongodb,
-    SiPostman,
-    SiBackendless,
-    SiExpress,
-} from "react-icons/si";
+import { SiJavascript, SiTailwindcss, SiMongodb, SiPostman, SiBackendless, SiExpress,} from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 const skills = [
@@ -107,14 +93,11 @@ const MySkills = () => {
                     <div data-aos="zoom-in-down">
                         <div
                              key={i}
-                            className={`
-  relative p-6 rounded-2xl
-  bg-gray-950
-  duration-300
-  border
-  hover:scale-[1.03]
-  ${group.shadow} ${group.border}
-`}>
+                            className={`relative p-6 rounded-2xl
+                                       bg-gray-950
+                                       duration-300 border
+                                       hover:scale-[1.03]
+                                       ${group.shadow} ${group.border}`}>
                             <h3
                                 className={`text-3xl font-semibold mb-6 bg-linear-to-r ${group.color} bg-clip-text text-transparent flex justify-center items-center gap-2`}
                             >
@@ -138,7 +121,7 @@ const MySkills = () => {
                                         <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
                                             <div
                                                 className={`h-full bg-linear-to-r ${group.color}
-                        transition-all duration-3000 ease-out`}
+                                                 transition-all duration-3000 ease-out`}
                                                 style={{
                                                     width: visible ? `${skill.level}%` : "0%",
                                                 }}

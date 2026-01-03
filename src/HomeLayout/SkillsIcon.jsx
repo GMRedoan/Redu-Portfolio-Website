@@ -38,13 +38,10 @@ const SkillsIcon = () => {
                 </div>
 
             </div>
-            {/* Glow layers */}
-            <div className="absolute top-1/2 left-1/2 w-32 h-32 md:w-46 md:h-46 bg-lime-700 rounded-full blur-3xl animate-pulse -translate-x-1/2 -translate-y-1/2" />
+             <div className="absolute top-1/2 left-1/2 w-32 h-32 md:w-46 md:h-46 bg-lime-700 rounded-full blur-3xl animate-pulse -translate-x-1/2 -translate-y-1/2" />
 
-            {/* Center image - Scaled for mobile */}
-            <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 spin-smooth z-5 w-20 h-20 md:w-45 md:h-45"
-            >
+             <div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 spin-smooth z-5 w-20 h-20 md:w-45 md:h-45">
                 <img
                     src="https://i.ibb.co.com/DHpGLc2q/0d4abb15-725e-42fb-a048-a2b4be688b43-removebg-preview.png"
                     alt="center"
@@ -52,7 +49,6 @@ const SkillsIcon = () => {
                 />
             </div>
 
-            {/* Orbit icons */}
             {icons.map(({ icon, radiusX, radiusY, duration }, index) => {
                 const animationName = `orbitAnimation${index}`;
 
@@ -84,7 +80,6 @@ const SkillsIcon = () => {
                                 width: orbitIconSize,
                                 height: orbitIconSize,
                                 animation: `${animationName} ${duration}s linear infinite`,
-                                // Using CSS variable to handle the responsive translation
                                 transformOrigin: `calc(var(--rX-${index}) * -1) 50%`,
                             }}
                         >

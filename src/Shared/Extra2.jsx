@@ -12,23 +12,9 @@ const Extra2 = () => {
     return (
         <section className="pt-4 pb-12 relative" ref={ref}>
             <div className="max-w-7xl mx-auto px-6 relative">
-
-                {/* 🌟 Glow background */}
-                {/* <div
-          className="
-            absolute inset-0 -z-10 rounded-3xl
-             bg-linear-to-r from-emerald-600 to-lime-600
-            blur-[120px]
-          "
-        /> */}
-
+ 
                 {/* CARD */}
-                <div data-aos="zoom-in-down" className='flex flex-col justify-between items-center'
-                //   className="
-                //     relative rounded-2xl p-8 md:p-12 text-center
-                //     bg-gray-950
-                //    "
-                >
+                <div data-aos="zoom-in-down" className='flex flex-col justify-between items-center'>
                     <div className='text-center'>
                         <h2 className="text-3xl md:text-4xl font-extrabold text-white">
                             {inView && (
@@ -50,26 +36,20 @@ const Extra2 = () => {
 
                     </div>
                     
-                    {/* BUTTON */}
                     <div data-aos="zoom-in-up">
                         <a
                             href="https://github.com/GMRedoan"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="
-              btn mt-8 px-8 py-6 text-white 
-            bg-linear-to-r from-emerald-600 to-lime-500 
-            border-none shadow-lg rounded-3xl
-            hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all ease-out duration-300
-    hover:scale-[1.05]
-    text-lg
-            "
-                        >
-                            <FaGithub className='text-xl' />
+                                      btn mt-8 px-8 py-6 text-white 
+                                      bg-linear-to-r from-emerald-600 to-lime-500 
+                                      border-none shadow-lg rounded-3xl
+                                      hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all ease-out duration-300 hover:scale-[1.05] text-lg">
+                               <FaGithub className='text-xl' />
                             <span className='px-2'>Visit My GitHub</span>
                             <FaExternalLinkAlt className='bounce-custom' />
                         </a>
-
                     </div>
                 </div>
             </div>

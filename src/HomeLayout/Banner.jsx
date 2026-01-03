@@ -24,7 +24,6 @@ const Banner = () => {
     const [index, setIndex] = useState(0);
     const [roleIndex, setRoleIndex] = useState(0);
 
-    // Typing effect
     useEffect(() => {
         const current = roles[roleIndex];
         if (index < current.length) {
@@ -61,10 +60,8 @@ const Banner = () => {
     return (
 
         <section id="banner-section" className="relative min-h-screen">
-            {/* 🌊 Animated gradient overlay */}
             <div className="absolute inset-0 bg-size-[200%_200%] animate-gradient-x opacity-60"></div>
 
-            {/* ✨ Floating shapes */}
             <div className="absolute w-72 h-72 bg-lime-300/30 rounded-full 
         top-40 md:left-30 blur-3xl animate-floatSlow"></div>
 
@@ -99,13 +96,13 @@ const Banner = () => {
 
                     <div className="flex gap-3">
                         <a
-                            href="/GM_Redoan_MERN_Developer.pdf"
+                            href="/GM_Redoan_Resume.pdf"
                             download
                             className="btn mt-8 px-6 md:px-8 text-white 
-            bg-linear-to-r from-emerald-600 to-lime-500 
-            border-none shadow-lg rounded-3xl
-            hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all ease-out duration-300
-    hover:scale-[1.05]">
+                                       bg-linear-to-r from-emerald-600 to-lime-500 
+                                       border-none shadow-lg rounded-3xl
+                                       hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all ease-out duration-300
+                                       hover:scale-[1.05]">
                             Download Resume <MdOutlineFileDownload className="bounce-custom" size={22} />
                         </a>
 
@@ -116,11 +113,11 @@ const Banner = () => {
                                 document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
                             }}
                             className="px-4 md:px-8 relative mt-8 font-bold rounded-3xl
-    text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-lime-500
-      border-2 border-gradient-to-r border-lime-500
-    shadow-lg hover:shadow-[0_0_20px_rgba(34,197,94,0.8)]
-    transition-all ease-out duration-300
-    hover:scale-[1.05] cursor-pointer"
+                                    text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-lime-500
+                                    border-2 border-gradient-to-r border-lime-500
+                                    shadow-lg hover:shadow-[0_0_20px_rgba(34,197,94,0.8)]
+                                    transition-all ease-out duration-300
+                                    hover:scale-[1.05] cursor-pointer"
                         >
                             Contact Me
                         </button>
@@ -128,35 +125,28 @@ const Banner = () => {
                     <div className="flex gap-10 pt-8 pl-2 text-3xl text-white cursor-pointer">
                         <a href="https://github.com/GMRedoan">
                             <FaGithub className="
-        bg-none
-        fill-current
-        transition-transform duration-300
-        hover:scale-[1.3]
-        hover:text-lime-300
-        hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]
-      "></FaGithub>
+                                            bg-none fill-current
+                                            transition-transform duration-300
+                                            hover:scale-[1.3] hover:text-lime-300
+                                            hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]">
+                            </FaGithub>
                         </a>
                         <a href="">
                             <FaLinkedin className="
-        bg-none
-        fill-current
-        transition-transform duration-300
-        hover:scale-[1.3]
-        hover:text-lime-300
-        hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]
-      "></FaLinkedin>
-
-
+                                           bg-none fill-current
+                                           transition-transform duration-300
+                                           hover:scale-[1.3] hover:text-lime-300
+                                           hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]">
+                            </FaLinkedin>
+ 
                         </a>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=redoangazi69@gmail.com">
                             <SiGmail className="
-        bg-none
-        fill-current
-        transition-transform duration-300
-        hover:scale-[1.3]
-        hover:text-lime-300
-        hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]
-      "></SiGmail>
+                                          bg-none fill-current
+                                          transition-transform duration-300
+                                          hover:scale-[1.3] hover:text-lime-300
+                                          hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]">
+                           </SiGmail>
 
                         </a>
                     </div>
@@ -170,8 +160,8 @@ const Banner = () => {
                         </h2>
                     </div>
                     <div className="absolute inset-0 
-  bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.35),transparent_65%)]
-  blur-3xl"></div>
+                                    bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.35),transparent_65%)]
+                                    blur-3xl"></div>
 
                     <img
                         src={hero_logo}

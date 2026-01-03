@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router';
+import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
     const [show, setShow] = useState(true);
@@ -63,7 +63,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content rounded-box z-10 mt-2 bg-linear-to-r from-emerald-700 to-lime-600 bg-clip-text text-transparent">
+                        className="menu menu-sm dropdown-content rounded-box z-10 mt-2  w-20 bg-gray-950">
                         {
                             link
                         }

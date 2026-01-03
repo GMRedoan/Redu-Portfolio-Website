@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { GrDocumentPerformance, GrTechnology } from "react-icons/gr";
 import { GiMoebiusStar } from "react-icons/gi";
-import { FaCode, FaLock } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { LuBrain } from "react-icons/lu";
 import { TbStack2Filled } from "react-icons/tb";
 import { Typewriter } from "react-simple-typewriter";
@@ -36,22 +36,14 @@ const AboutMe = () => {
             </div>
 
             <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-                {/* Card 1 */}
-                {/* <div className="absolute w-180 h-152 bg-lime-300/30 rounded-full bottom-5 blur-3xl animate-floatSlow"></div> */}
-
                 <div data-aos="fade-right">
                     <div
                         className="relative group bg-gray-950 backdrop-blur-md
-    rounded-xl p-8 transform-gpu
-    scale-100 hover:scale-[1.03]
-    transition-all duration-300 ease-out
-
-    /* normal shadow */
-    shadow-lime-400
-
-    /* hover glow */
-    hover:shadow-[0_8px_18px_rgba(34,197,94,0.25)]"
-                    >
+                                rounded-xl p-8 transform-gpu
+                                scale-100 hover:scale-[1.03]
+                                transition-all duration-300 ease-out
+                                shadow-lime-400
+                                hover:shadow-[0_8px_18px_rgba(34,197,94,0.25)]">
                         <div className="relative z-10">
                             {/* Title */}
                             <h3
@@ -81,10 +73,8 @@ const AboutMe = () => {
                                 Bangladesh.
                             </p>
 
-                            {/* Divider */}
                             <div className="w-full h-0.5 my-7 bg-linear-to-r from-transparent via-lime-500 to-transparent animate-pulse"></div>
 
-                            {/* Highlights */}
                             <div
                                 data-aos="fade-right"
                                 className="space-y-3 font-semibold text-emerald-900/80 cursor-pointer"
@@ -118,19 +108,13 @@ const AboutMe = () => {
                 <div data-aos="fade-left">
                     <div
                         className="
-      relative group bg-gray-950 backdrop-blur-md
-    rounded-xl p-8 transform-gpu
-    scale-100 hover:scale-[1.03]
-    transition-all duration-300 ease-out
-
-    /* normal shadow */
-    shadow-lime-400
-
-    /* hover glow */
-    hover:shadow-[0_8px_18px_rgba(16,185,129,0.28)]
-    "
+                                   relative group bg-gray-950 backdrop-blur-md
+                                   rounded-xl p-8 transform-gpu
+                                   scale-100 hover:scale-[1.03]
+                                   transition-all duration-300 ease-out
+                                 shadow-lime-400
+                                   hover:shadow-[0_8px_18px_rgba(16,185,129,0.28)]"
                     >
-                        {/* HEADING */}
                         <h3
                             data-aos="zoom-in"
                             className="text-2xl font-extrabold bg-linear-to-r from-emerald-600 to-lime-500 bg-clip-text text-transparent mb-4 flex justify-center items-center gap-4"
@@ -149,11 +133,9 @@ const AboutMe = () => {
                         <p className="text-gray-400 leading-relaxed text-sm md:text-base ">
                             My core expertise lies in developing reliable, user-friendly web solutions that prioritize performance, scalability, and long-term maintainability for real-world business needs.
                         </p>
-                        {/* Divider */}
                         <div className="w-full h-0.5 my-6 bg-linear-to-r from-transparent via-lime-500 to-transparent animate-pulse"></div>
 
 
-                        {/* GRID */}
                         <div data-aos="zoom-in" className="grid sm:grid-cols-2 gap-4">
                             {[
                                 {
@@ -181,21 +163,18 @@ const AboutMe = () => {
                                     key={i}
                                     className="relative group/card rounded-xl p-px overflow-hidden"
                                 >
-                                    {/* Animated Border */}
-                                    <div
-                                        className="
-      pointer-events-none absolute inset-0 rounded-xl
-      bg-[conic-gradient(from_0deg,rgba(163,230,53,0),rgba(163,230,53,0.6),rgba(163,230,53,0))]
-      animate-[spin_8s_linear_infinite]
-      transition-opacity duration-300
-    "
-                                    ></div>
+                                    <div className="
+                                            pointer-events-none absolute inset-0 rounded-xl
+                                            bg-[conic-gradient(from_0deg,rgba(163,230,53,0),rgba(163,230,53,0.6),rgba(163,230,53,0))]
+                                            animate-[spin_8s_linear_infinite]
+                                            transition-opacity duration-300">
+                                    </div>
 
                                     {/* Card */}
                                     <div
                                         className="
-      relative rounded-xl py-6 px-4
-      bg-gray-900 backdrop-blur-md cursor-pointer"
+                                               relative rounded-xl py-6 px-4
+                                               bg-gray-900 backdrop-blur-md cursor-pointer"
                                     >
                                         <h4 className="text-lg font-semibold bg-linear-to-r from-emerald-700 to-lime-500 bg-clip-text text-transparent mb-2 flex items-center gap-1">
                                             <span className="text-md bounce-custom">{item.icon}</span>

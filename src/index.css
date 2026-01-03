@@ -8,7 +8,6 @@
      font-family: "Russo One", sans-serif;;
 }
 
- /* ===================== Glow Text ===================== */
 @keyframes glow {
   0%, 100% {
     text-shadow: 0 0 8px rgba(163, 230, 53, 0.6);
@@ -22,7 +21,6 @@
   animation: glow 2.5s ease-in-out infinite;
 }
 
-/* ===================== Wave Text Effect ===================== */
 .wave {
   display: inline-block;
 }
@@ -53,7 +51,6 @@
   }
 }
 
-/* ===================== Floating Effect ===================== */
 @keyframes floatSlow {
   0%, 100% {
     transform: translateY(0);
@@ -68,18 +65,16 @@
 }
 
     
- /* Floating text animation */
 @keyframes floatSlow {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px); /* text moves up smoothly */
+    transform: translateY(-20px); 
   }
 }
 
-/* Tailwind-friendly class */
-.animate-floatSlow {
+ .animate-floatSlow {
   animation: floatSlow 4s ease-in-out infinite;
 }
 
@@ -92,12 +87,10 @@
   }
 }
 
-/* Apply animation */
 .bounce-custom {
   animation: bounce-custom 3s ease-in-out infinite;
 }
 
-/* spin */
 @keyframes smooth-spin {
   0% {
     transform: rotate(0deg);
@@ -111,7 +104,6 @@
   animation: smooth-spin 18s linear infinite;
 }
 
-/* shake */
 @keyframes shake {
  0%, 100% { transform: translate(0, 0) rotate(0deg); }
   10%, 30%, 50%, 70%, 90% { transform: translate(-5px, -5px) rotate(-20deg); }

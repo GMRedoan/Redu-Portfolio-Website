@@ -1,14 +1,11 @@
 import { useForm } from "react-hook-form";
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaLocationArrow,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaLocationArrow, } from "react-icons/fa";
 import { ImLocation2 } from "react-icons/im";
 import { IoIosSend, IoLogoWhatsapp } from "react-icons/io";
 import { PiPlugsConnectedFill } from "react-icons/pi";
 import { useInView } from "react-intersection-observer";
 import { Typewriter } from "react-simple-typewriter";
+import Swal from "sweetalert2";
 
 const ContactMe = () => {
   const {
@@ -20,6 +17,12 @@ const ContactMe = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    Swal.fire({
+      title: "Successfully Sent",
+      icon: "success",
+      draggable: false,
+      confirmButtonColor: "#008000"
+    });
     reset();
   };
 
@@ -48,9 +51,7 @@ const ContactMe = () => {
               gap-6 mb-16 max-w-6xl mx-auto
               static sm:absolute
               sm:-top-5 sm:right-45
-              z-10
-            "
-          >
+              z-10">
             {[
               {
                 icon: <FaEnvelope className="bounce-custom" />,
@@ -60,12 +61,12 @@ const ContactMe = () => {
               {
                 icon: <FaPhoneAlt className="shake" />,
                 title: "Phone",
-                text: "+880 1764108600",
+                text: "+880 1540404154",
               },
               {
                 icon: <IoLogoWhatsapp className="bounce-custom" />,
                 title: "Whatsapp",
-                text: "+880 1764108600",
+                text: "+880 1540404154",
               },
               {
                 icon: <ImLocation2 className="animate-pulse" />,
@@ -96,7 +97,6 @@ const ContactMe = () => {
             ))}
           </div>
 
-          {/* ===== MAIN CONTENT ===== */}
           <div
             data-aos="zoom-in"
             className="
@@ -104,9 +104,8 @@ const ContactMe = () => {
               bg-gray-950 backdrop-blur-xl
               rounded-2xl
               p-6 sm:p-10
-              pt-10 sm:pt-20
-            "
-          >
+              pt-10 sm:pt-20">
+
             {/* LEFT CONTENT */}
             <div>
               <div className="text-2xl sm:text-3xl font-bold flex gap-2">
@@ -176,6 +175,7 @@ const ContactMe = () => {
               className="space-y-4 sm:space-y-6"
             >
               {/* Name */}
+
               <div>
                 <input
                   type="text"

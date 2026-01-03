@@ -49,20 +49,15 @@ const MyProjects = () => {
     <section id="project-section" className="py-6 pb-14 relative">
       <div className="max-w-7xl mx-auto px-4 relative">
 
-        {/* BLURRED BACKGROUND GLOW */}
-        <div
+         <div
           className="absolute top-20 inset-0 -z-10 rounded-2xl
             bg-linear-to-br from-emerald-400/30 to-lime-400/30
-            blur-[80px]"
-        />
+            blur-[80px]"/>
 
-        {/* CONTENT */}
-        <div className="relative">
-          {/* Section Header */}
-          <div
+         <div className="relative">
+           <div
             data-aos="zoom-in-down"
-            className="mb-6 text-center text-4xl md:text-5xl font-extrabold pb-10"
-          >
+            className="mb-6 text-center text-4xl md:text-5xl font-extrabold pb-10">
             <h2 className="text-white">
               My{" "}
               <span className="bg-linear-to-r from-emerald-400 to-lime-400 bg-clip-text text-transparent shimmer">
@@ -72,7 +67,7 @@ const MyProjects = () => {
             <div data-aos="zoom-in" className="w-58 h-1 mx-auto mt-3 bg-lime-400 rounded-full" />
           </div>
 
-          {/* Cards Grid */}
+          {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div key={project.id} data-aos="zoom-in-down">
@@ -82,7 +77,6 @@ const MyProjects = () => {
                     shadow-[0_10px_30px_rgba(132,204,22,0.18)]
                     hover:shadow-[0_30px_50px_rgba(132,204,22,0.25)]"
                 >
-                  {/* Image */}
                   <figure className="overflow-hidden">
                     <img
                       src={project.image}
@@ -91,7 +85,6 @@ const MyProjects = () => {
                     />
                   </figure>
 
-                  {/* CARD BODY */}
                   <div className="card-body">
                     <h3 className="card-title flex items-center gap-2">
                       {project.icon}
@@ -104,7 +97,6 @@ const MyProjects = () => {
                       {project.description}
                      </p>
 
-                    {/* Tech Stack */}
                     <div data-aos="zoom-in" className="flex flex-wrap gap-2 mt-2">
                       {project.tech.map((item, index) => (
                         <span
@@ -118,7 +110,6 @@ const MyProjects = () => {
                       ))}
                     </div>
 
-                    {/* Buttons */}
                     <div data-aos='zoom-in-down' className="card-actions mt-4 grid grid-cols-2 gap-2">
                       <button
                         onClick={() => handleLive(project.liveLink)}
