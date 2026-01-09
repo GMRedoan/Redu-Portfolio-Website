@@ -21,6 +21,7 @@ const ContactMe = () => {
       title: "Successfully Sent",
       icon: "success",
       draggable: false,
+
       confirmButtonColor: "#008000"
     });
     reset();

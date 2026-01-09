@@ -6,7 +6,7 @@ import { TbLivePhotoFilled } from "react-icons/tb";
 const projects = [
   {
     id: 1,
-    title: "Blood Donation Website",
+    title: "Red Care",
     liveLink: 'https://red-care-2025.netlify.app',
     repoLink: 'https://github.com/GMRedoan/red_care-client.git',
     icon: <FaDroplet className="text-red-500 bounce-custom" />,
@@ -17,13 +17,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Car Rental Website",
+    title: "Rent Wheels",
     liveLink: 'https://rent-wheels-2025.netlify.app',
     repoLink: 'https://github.com/GMRedoan/rent_wheels-client.git',
     icon: <IoCarSportSharp className="text-lime-500 animate-pulse" />,
     description:
       "A Car rental website with Private routes and modern search functionality, UI/UX friendly. Besides, canceling system of rented car",
-    image: "https://i.ibb.co.com/VcHckbff/Screenshot-2025-12-28-at-5-59-58-PM.png",
+    image: "https://i.ibb.co.com/qMJ2VxhQ/Screenshot-2026-01-10-at-12-44-36-AM.png",
     tech: ["React", "API", "UI", "Node.js", "Cors", "JavaScript", "CSS"],
   },
   {

@@ -45,12 +45,21 @@ const Navbar = () => {
             }}
             className='relative text-lime-500 font-semibold hover:text-[#22c55e] transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#22c55e] after:transition-all after:duration-300 
            hover:after:w-full animate-glow'>Project</NavLink>,
+
         <NavLink
-        onClick={(e) => {
+            onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("service-section")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className='relative text-lime-500 font-semibold hover:text-[#22c55e] transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#22c55e] after:transition-all after:duration-300 
+           hover:after:w-full animate-glow'>Services</NavLink>,
+
+        <NavLink
+            onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
             }}
-         className='relative text-lime-500 font-semibold hover:text-[#22c55e] transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#22c55e] after:transition-all after:duration-300 
+            className='relative text-lime-500 font-semibold hover:text-[#22c55e] transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#22c55e] after:transition-all after:duration-300 
            hover:after:w-full animate-glow'>Contact</NavLink>,
     ]
     return (
@@ -90,7 +99,7 @@ const Navbar = () => {
             <div data-aos="fade-left"
 
                 className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal space-x-14 text-xl font-name2">
+                <ul className="menu menu-horizontal space-x-10 text-xl font-name2">
                     {
                         link
                     }

@@ -35,7 +35,7 @@ const Service = () => {
       });
     
     return (
-        <section className="pb-20 md:pt-10" ref={ref}>
+        <section id="service-section" className="pb-20 md:pt-10" ref={ref}>
             <section className="relative py-8 pb-12">
                 <div className="absolute inset-0 mx-22 max-w-7xl bg-linear-to-br from-emerald-900 to-lime-500 rounded-2xl
                 blur-[60px] opacity-20 border-2 border-lime-400" />
